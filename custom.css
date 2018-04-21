@@ -1,0 +1,19 @@
+body {
+  -ms-overflow-style: scrollbar;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.navbar{
+  -webkit-app-region:drag !important;
+  padding-top: 25px !important;
+}
+
+.nav-scroller{
+  top: 60px !important;
+}

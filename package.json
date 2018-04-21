@@ -1,0 +1,42 @@
+{
+  "name": "pilight-desktop",
+  "productName": "Pilight Desktop",
+  "version": "1.0.0",
+  "description": "Unofficial Pilight Desktop App",
+  "main": "app.js",
+  "dependencies": {
+    "electron-config": "^1.0.0",
+    "electron-is-dev": "^0.3.0",
+    "electron-window-state": "^4.1.1"
+  },
+  "devDependencies": {
+    "electron": "^2.0.0-beta.7",
+    "electron-builder": "^20.8.1"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build-mac": "build -m"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelkordek/pilight-desktop.git"
+  },
+  "keywords": [
+    "pilight",
+    "electron",
+    "app"
+  ],
+  "author": "Marcel Kordek <marcelkordek@me.com> (www.marcelkordek.de)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcelkordek/pilight-desktop/issues"
+  },
+  "homepage": "https://github.com/marcelkordek/pilight-desktop#readme",
+  "build": {
+    "appId": "de.marcelkordek.pilight-desktop",
+    "productName": "Pilight Desktop",
+    "mac": {
+      "category": "public.app-category.productivity"
+    }
+  }
+}
