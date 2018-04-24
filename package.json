@@ -1,12 +1,13 @@
 {
   "name": "pilight-desktop",
   "productName": "Pilight Desktop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unofficial Pilight Desktop App",
   "main": "app.js",
   "dependencies": {
     "electron-config": "^1.0.0",
     "electron-is-dev": "^0.3.0",
+    "electron-updater": "^2.21.8",
     "electron-window-state": "^4.1.1"
   },
   "devDependencies": {
@@ -15,7 +16,12 @@
   },
   "scripts": {
     "start": "electron .",
-    "build-mac": "build -m"
+    "build-mac": "build -m -p never",
+    "release": "build -m",
+    "postversion": "git add . && git push && npm run release",
+    "ship-patch": "npm version patch --force -m \"version %s\"",
+    "ship-minor": "npm version minor --force -m \"version %s\"",
+    "ship-major": "npm version major --force -m \"version %s\""
   },
   "repository": {
     "type": "git",
