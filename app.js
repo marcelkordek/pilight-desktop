@@ -3,6 +3,13 @@ const path = require('path');
 const fs = require('fs');
 const {app, BrowserWindow, shell, Tray, Menu} = require('electron');
 const appMenu = require('./menu');
+const autoUpdater = require("electron-updater").autoUpdater;
+const log = require('electron-log');
+const isDev = require('electron-is-dev');
+
+autoUpdater.logger = log;
+autoUpdater.logger.transports.file.level = 'info';
+log.info('App starting...');
 
 let mainWindow;
 let appIcon;
@@ -74,7 +81,8 @@ app.on('ready', () => {
   Menu.setApplicationMenu(appMenu.mainMenu);
 
   mainWindow = createMainWindow();
-  //createTray();
+  
+  if (!isDev) autoUpdater.checkForUpdatesAndNotify();
 
   const page = mainWindow.webContents;
 

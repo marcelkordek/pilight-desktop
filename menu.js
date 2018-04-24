@@ -3,6 +3,7 @@ const {app, BrowserWindow, Menu, shell} = require('electron');
 const os = require('os');
 const configStore = require('./config');
 const isDev = require('electron-is-dev');
+const update = require('./updater');
 
 //const appName = app.getName();
 const appName = app.getName();
@@ -44,6 +45,10 @@ const darwinTpl = [
       {
         label: `Über ${appName}`,
         role: 'about'
+      },
+      {
+        label: 'Auf Update prüfen ',
+        click(item, focusedWindow, event) { update.checkForUpdates(item, focusedWindow, event); }
       },
       {
         type: 'separator'
