@@ -39,14 +39,14 @@ autoUpdater.on('update-available', (info) => {
   })
 })
 
-autoUpdater.on('update-not-available', () => {
+autoUpdater.on('update-not-available', (info) => {
   var dock = app.dock
   if (!updater == null) {
     dock.setBadge('')
 
     dialog.showMessageBox({
       title: 'Kein Update verfügbar',
-      message: app.getName() + ' Version: '+info.version+' ist die aktuellste Verion!'
+      message: app.getName() + ' Version: '+info.version+' ist die aktuellste Version!'
     })
 
     updater.enabled = true
