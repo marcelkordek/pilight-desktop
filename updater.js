@@ -14,7 +14,7 @@ let updater;
 autoUpdater.autoDownload = false
 
 autoUpdater.on('error', (error) => {
-  //dialog.showErrorBox('Error: ', error == null ? "unknown" : (error.stack || error).toString())
+  dialog.showErrorBox('Error: ', error == null ? "unknown" : (error.stack || error).toString())
 })
 
 autoUpdater.on('update-available', (info) => {
@@ -31,7 +31,7 @@ autoUpdater.on('update-available', (info) => {
       autoUpdater.downloadUpdate()
     }
     else {
-      if (!updater == null) {
+      if (updater != null) {
         updater.enabled = true
         updater = null
       }
@@ -41,7 +41,7 @@ autoUpdater.on('update-available', (info) => {
 
 autoUpdater.on('update-not-available', (info) => {
   var dock = app.dock
-  if (!updater == null) {
+  if (updater != null) {
     dock.setBadge('')
 
     dialog.showMessageBox({
