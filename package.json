@@ -1,7 +1,7 @@
 {
   "name": "pilight-desktop",
   "productName": "Pilight Desktop",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Unofficial Pilight Desktop App",
   "main": "app.js",
   "dependencies": {
