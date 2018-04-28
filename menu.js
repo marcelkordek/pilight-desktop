@@ -5,7 +5,6 @@ const configStore = require('./config');
 const isDev = require('electron-is-dev');
 const update = require('./updater');
 
-//const appName = app.getName();
 const appName = app.getName();
 
 function restoreWindow() {
@@ -87,6 +86,16 @@ const darwinTpl = [
         accelerator: 'CmdOrCtrl+R',
         click (item, focusedWindow) {
           if (focusedWindow) focusedWindow.reload()
+        }
+      },
+      {
+        label: 'Nachtmodus',
+        accelerator: process.platform === 'darwin' ? 'Alt+Command+N' : 'Ctrl+Shift+N',
+        type: 'checkbox',
+        checked: configStore.get('darkMode'),
+        click(item) {
+          configStore.set('darkMode', item.checked);
+          sendAction('toggleDarkMode');
         }
       },
       {

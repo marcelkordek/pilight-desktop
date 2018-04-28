@@ -44,7 +44,7 @@ function createMainWindow() {
 
   mainWindowState.manage(win);
 
-  win.loadURL('http://rpiremote.local:5001/bootstrap/index.html', {
+  win.loadURL('http://rpiremote.marcelkordek.de:5001/bootstrap/index.html', {
     userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36'
   });
   //win.toggleDevTools();

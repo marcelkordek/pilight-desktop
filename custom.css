@@ -17,3 +17,100 @@ body {
 .nav-scroller{
   top: 60px !important;
 }
+
+/* dark-mode */
+html.dark-mode body,
+html.dark-mode .slider{
+  background-color: #333 !important;
+}
+
+html.dark-mode .text-muted,
+html.dark-mode .nav-underline .nav-link{
+  color: #ececec !important;
+}
+
+html.dark-mode .bg-light,
+html.dark-mode .bg-white {
+  background-color: #222 !important;
+  }
+
+  html.dark-mode .text-dark {
+    color: #fff !important;
+    }
+
+    html.dark-mode #scrollTopBtn {
+      color: #ddd !important;
+      }
+
+      html.dark-mode #scrollTopBtn:hover {
+        color: #00bc8c !important;
+        }
+
+    html.dark-mode .list-group-item {
+      background-color: #00bc8c !important;
+      }
+
+    html.dark-mode .navbar-light .navbar-brand,
+    html.dark-mode .navbar-light .navbar-text {
+      color: #fff !important;
+      }
+
+      html.dark-mode .nav-underline .active{
+        color: #00bc8c !important
+      }
+
+      html.dark-mode .nav-underline .nav-link:after {
+        border-bottom: 2px solid #00bc8c;
+    }
+
+    html.dark-mode .card{
+      background-color: #00bc8c !important;
+    }
+
+    html.dark-mode .card-header{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+      background-color: #333 !important;
+    }
+
+    html.dark-mode .border-top{
+      border-top-color: #00bc8c !important;
+    }
+
+    html.dark-mode .modal-content{
+      background-color: #303030;
+background-clip: padding-box;
+border: 1px solid #444;
+    }
+
+    html.dark-mode .modal-header{
+      border-bottom: 1px solid #444 !important;
+    }
+
+    html.dark-mode .modal-footer{
+      border-top: 1px solid #444 !important;
+    }
+
+    html.dark-mode .modal-title{
+      color: #fff !important;
+    }
+
+    html.dark-mode .close{
+      color: #fff !important;
+    }
+
+    html.dark-mode .btn-primary{
+      background-color: #00bc8c !important;
+      border-color: #00bc8c !important;
+    }
+
+    html.dark-mode .form-control{
+      color: #fff !important;
+      background-color: #333 !important;
+      border-color: #00bc8c !important;
+    }
+
+    html.dark-mode .input-group-text{
+      color: #fff !important;
+      background-color: #00bc8c !important;
+      border-color: #00bc8c !important;
+    }
